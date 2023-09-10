@@ -1,0 +1,19 @@
+{
+  "name": "private",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.ts",
+  "scripts": {
+    "dev": "bun --hot run server.ts"
+  },
+  "keywords": [],
+  "author": "Fernando Gabriel Belotto Bosco <fernando.bbosco@gmail.com> (https://fernandobelotto.com/)",
+  "dependencies": {
+    "express": "^4.18.2",
+    "shared": "link:shared"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.17",
+    "bun-types": "latest"
+  }
+}

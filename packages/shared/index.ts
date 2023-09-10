@@ -1,0 +1,1 @@
+export const uniqueValue = "my-unique-value2"
