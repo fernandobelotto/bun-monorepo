@@ -9,6 +9,13 @@ app.get("/", (req, res) => {
   res.send("Hello Worldas! 2");
 });
 
-app.listen(port, () => {
+const server = app.listen(port, () => {
   console.log(`Listening on port http://localhost:${port}`);
 });
+
+process.on('SIGTERM', () => {
+  console.log('SIGTERM signal received: closing HTTP server')
+  server.close(() => {
+    console.log('HTTP server closed')
+  })
+})

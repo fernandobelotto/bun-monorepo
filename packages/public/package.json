@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.ts",
   "scripts": {
-    "dev": "bun --hot run server.ts"
+    "dev": "bun --watch run server.ts"
   },
   "keywords": [],
   "author": "Fernando Gabriel Belotto Bosco <fernando.bbosco@gmail.com> (https://fernandobelotto.com/)",
