@@ -31,7 +31,7 @@ services:
   postgres:
     image: postgres:15
     volumes:
-      - data:/var/lib/postgresql/data
+      - ./data/postgres:/var/lib/postgresql/data
     ports:
       - "5432:5432"
     healthcheck:
