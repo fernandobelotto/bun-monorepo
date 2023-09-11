@@ -1,26 +1,10 @@
-import express from "express"
-import { uniqueValue } from "shared";
-import { cerbos } from "./cerbos";
+import express from "express";
+import { handler } from "./handler";
 
 const app = express();
 const port = Bun.env.PORT ?? 8081;
 
-app.get("/", async (req, res) => {
-  console.log('uniqueValue', uniqueValue)
-  console.log(await cerbos.isAllowed({
-    principal: {
-      id: "user@example.com",
-      roles: ["USER"],
-    },
-    resource: {
-      kind: "user",
-      id: "1"
-    },
-    action: "view",
-  }))
-  console.log('hell')
-  res.send("Hello World! 1");
-});
+app.get("/", handler);
 
 const server = app.listen(port, () => {
   console.log(`Listening on port http://localhost:${port}`);

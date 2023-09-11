@@ -1,1 +1,1 @@
-export const uniqueValue = "my-unique-value2"
+export const sharedValue = "my-shared-value"

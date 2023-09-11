@@ -1,12 +1,12 @@
 import express from "express"
-import { uniqueValue } from "shared";
+import { sharedValue } from "shared";
 
 const app = express();
 const port = Bun.env.PORT ?? 8082;
 
 app.get("/", (req, res) => {
-  console.log('uniqueValue', uniqueValue)
-  res.send("Hello Worldas! 2");
+  console.log('uniqueValue', sharedValue)
+  res.send("Hello world! public server: sharedValue: " + sharedValue);
 });
 
 const server = app.listen(port, () => {
