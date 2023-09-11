@@ -2,8 +2,17 @@
 
 Simple example of how to use bun workspaces with docker images
 
-useful commands:
+simply run:
 
+```
 docker compose up
-docker build -f docker/private.Dockerfile -t private .
-docker build -f docker/public.Dockerfile -t public .
+```
+
+and that's it!
+
+the docker compose includes:
+- minio for object storage
+- postgresql database
+- mongodb database
+- mailhog for local email testing
+- cerbos for permission
